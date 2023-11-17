@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <script src="https://kit.fontawesome.com/38446864d9.js" crossorigin="anonymous"></script>
+     <script src="jquery-3.7.0.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="container_cabecalho"  >
+        
+    </div>
+
+    <div class="input_pesquisar" style="margin-top: 50px;">
+      <input  class="pesquisar"  type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+  
+    
+<div class="inputs_container">
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Cadastrar
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de produtos </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body">
+           <input id="input-nome" type="text" placeholder="Produto" minlength="8">
+           <input  id="input_descricao"  type="text" placeholder="Descrição">
+           <input id="input-idade"   type="text" placeholder="Quantidade">
+           <input  id="input-e-mail"    type="text" placeholder="Valor Und">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="btn-salvar"  type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <!-- Modal-edit -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edição de usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body">
+           <input id="input-nome-edit" type="text" placeholder="nome">
+           <input  id="descricao_edit" type="text">
+           <input id="input-idade-edit"   type="text" placeholder="Idade">
+           <input  id="input-e-mail-edit"    type="text" placeholder="e-mail">
+           
+
+        </div>
+        <div class="modal-footer">
+          <button    type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="btn-salvar-edit"  type="button" class="btn btn-primary">salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+</div>
+
+
+
+   <div class="tabelas_container">
+    <div class="container_table">
+    <table id="table" class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Valor Und</th>
+          </tr>
+        </thead>
+        <tbody  id="tabelas-pesquisa">
+        
+        
+         
+        </tbody>
+      </table>
+
+
+    </div>
+   </div>
+       
+
+   <script src="/js/script.js"></script>
+  
+</body>
+</html>

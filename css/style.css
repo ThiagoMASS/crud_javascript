@@ -1,0 +1,52 @@
+
+
+.container_cabecalho{
+    display: flex;
+    
+    position: fixed;
+    background-color:black;
+    padding: 20px;
+    flex-direction: row-reverse;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    
+}
+
+.tabelas_container{
+    display: flex;
+    justify-content: center;
+   width: 100%; 
+}
+.container_table{
+    margin-top: 60px;
+    width:700px;
+}
+.inputs_container{
+    
+    margin-top: 60px;
+    display: flex;
+    margin-left: 90px;  
+}
+
+
+input{
+    
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+input:focus{
+    border-color: dodgerblue;
+}
+#modal-body{
+   
+    display: flex;
+    flex-direction: column;
+}
+i{
+    cursor: pointer;
+}
